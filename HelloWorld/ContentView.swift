@@ -1,6 +1,8 @@
 import SwiftUI
 
+//  View - обязывает вернуть body
 struct ContentView: View {
+    //  Some View - обязывает вернуть view
     var body: some View {
         VStack {
             Image(systemName: "globe")
