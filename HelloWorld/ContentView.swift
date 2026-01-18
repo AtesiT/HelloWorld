@@ -4,12 +4,22 @@ import SwiftUI
 struct ContentView: View {
     //  Some View - обязывает вернуть view
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        HStack {
+            Image(systemName: "swift")
+                .font(.title)
+            VStack(alignment: .leading) {
+                Text("Hello, Swift!")
+                    .font(.title)
+                    .foregroundStyle(.green)
+                HStack {
+                    Text("This's SwiftUI")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("Lesson One")
+                }
+            }
         }
+        //  По умолчанию - 16px
         .padding()
     }
 }
