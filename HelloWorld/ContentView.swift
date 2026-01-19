@@ -4,9 +4,9 @@ import SwiftUI
 struct ContentView: View {
     //  Some View - обязывает вернуть view
     var body: some View {
-        HStack {
-            Image(systemName: "swift")
-                .font(.title)
+        VStack {
+            SwiftLogoView(color: .orange)
+                .padding(.bottom, -16)
             VStack(alignment: .leading) {
                 Text("Hello, Swift!")
                     .font(.title)
@@ -18,9 +18,12 @@ struct ContentView: View {
                     Text("Lesson One")
                 }
             }
+            Spacer()
         }
-        //  По умолчанию - 16px
         .padding()
+        //  По умолчанию - 16px
+//        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+        .padding(.top, 16)
     }
 }
 
