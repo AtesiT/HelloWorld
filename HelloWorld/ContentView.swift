@@ -2,11 +2,11 @@ import SwiftUI
 
 //  View - обязывает вернуть body
 struct ContentView: View {
+    @State private var tapCount = 0
     //  Some View - обязывает вернуть view
     var body: some View {
         VStack {
             SwiftLogoView(color: .orange)
-                .padding(.bottom, -16)
             VStack(alignment: .leading) {
                 Text("Hello, Swift!")
                     .font(.title)
@@ -17,13 +17,20 @@ struct ContentView: View {
                     Spacer()
                     Text("Lesson One")
                 }
+                Spacer()
             }
-            Spacer()
+            Button(action: buttonAction) {
+                Text("Tap count: \(tapCount)")
+                    .font(.largeTitle)
+            }
+            .padding(.bottom, 20)
         }
-        .padding()
         //  По умолчанию - 16px
-//        .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
-        .padding(.top, 16)
+        .padding()
+    }
+    
+    private func buttonAction() {
+        tapCount += 1
     }
 }
 
